@@ -1,12 +1,18 @@
-const url = "https://72.177.61.58:5000/"
+const url = "http://72.177.61.58:5000/"
 
 const GET = async (src) => {
-    let data = await fetch(url + src, {headers: {'Content-Type': 'application/json'}})
+    let data = await fetch(url + src, {
+        headers: {'Content-Type': 'application/json'},
+    })
     return await data.json()
 }
 
 const POST = async (src, query) => {
-    let data = await fetch(url + src, {body: JSON.stringify(query), method: 'POST', headers: {'Content-Type': 'application/json'}})
+    let data = await fetch(url + src, {
+        body: JSON.stringify(query),
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+    })
     return await data.json()
 }
 
