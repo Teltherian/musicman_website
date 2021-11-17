@@ -1,4 +1,4 @@
-const url = "http://localhost:5000/"
+const url = "72.177.61.58"
 
 const GET = async (src) => {
     let data = await fetch(url + src, {headers: {'Content-Type': 'application/json'}})
